@@ -38,13 +38,6 @@
             <artifactId>ymjhuahua-common</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
-
-        <!-- 数据库连接池 -->
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>druid</artifactId>
-            <version>${druid.version}</version>
-        </dependency>
     </dependencies>
 
     <build>
