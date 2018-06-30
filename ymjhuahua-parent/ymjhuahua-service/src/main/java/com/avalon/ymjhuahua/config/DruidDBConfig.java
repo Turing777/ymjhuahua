@@ -24,9 +24,7 @@ public class DruidDBConfig {
     @Primary
     @ConfigurationProperties(prefix = "spring.datasource")
     public DataSource dataSource() {
-        DataSource dataSource = DataSourceBuilder.create().type(com.alibaba.druid.pool.DruidDataSource.class).build();
-        return dataSource;
-        //        return DataSourceBuilder.create().type(com.alibaba.druid.pool.DruidDataSource.class).build();
+        return DataSourceBuilder.create().type(com.alibaba.druid.pool.DruidDataSource.class).build();
     }
 
     @Bean(name = "mainSqlSessionFactory")
