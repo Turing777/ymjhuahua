@@ -32,7 +32,6 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-
         <dependency>
             <groupId>com.avalon.ymjhuahua</groupId>
             <artifactId>ymjhuahua-common</artifactId>
