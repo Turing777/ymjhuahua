@@ -1,10 +1,8 @@
 package com.avalon.ymjhuahua.config;
 
-import com.avalon.ymjhuahua.TestEntity;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.SqlSessionTemplate;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceBuilder;
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -18,15 +16,11 @@ import javax.sql.DataSource;
 @Configuration
 public class DruidDBConfig {
 
-    @Autowired
-    private TestEntity testEntity;
-
     @Bean(name = "dataSource")
     @Qualifier(value = "dataSource")
     @Primary
     @ConfigurationProperties(prefix = "spring.datasource")
     public DataSource dataSource() {
-        System.out.println(testEntity.getName());
         DataSource dataSource = DataSourceBuilder.create().type(com.alibaba.druid.pool.DruidDataSource.class).build();
         return  dataSource;
 //        return DataSourceBuilder.create().type(com.alibaba.druid.pool.DruidDataSource.class).build();
