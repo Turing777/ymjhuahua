@@ -1,0 +1,18 @@
+server:
+    port: 8770
+spring:
+    application:
+        name: ymjhuahua-zuul
+    sleuth:
+        sampler:
+            percentage: 1.0
+
+eureka:
+    instance:
+        statusPageUrlPath: ${management.context-path}/info
+        healthCheckUrlPath: ${management.context-path}/health
+        prefer-ip-address: true
+        instance-id: ${spring.cloud.client.ipAddress}:${server.port}
+    client:
+        serviceUrl:
+            defaultZone: http://localhost:8761/eureka/

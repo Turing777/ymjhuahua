@@ -1,0 +1,13 @@
+server:
+    port: 8761
+eureka:
+    instance:
+        hostname: ymjhuahua-center
+    client:
+        registerWithEureka: false
+        fetch-registry: false
+        service-url:
+            defaultZone: http://localhost:${server.port}/eureka/
+spring:
+    application:
+        name: ymjhuahua-center
