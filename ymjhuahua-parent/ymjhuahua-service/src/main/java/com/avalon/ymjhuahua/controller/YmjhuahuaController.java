@@ -39,4 +39,13 @@ public class YmjhuahuaController extends AbstractController {
     public List<Person> getAll() {
         return testService.select();
     }
+
+    @RequestMapping(value = "/test/{abc}")
+    public String test(@PathVariable("abc") String abc) {
+        if (abc.equals("a")) {
+            throw new NullPointerException();
+        }
+        logger.info("执行目标代码");
+        return "success" + abc;
+    }
 }
