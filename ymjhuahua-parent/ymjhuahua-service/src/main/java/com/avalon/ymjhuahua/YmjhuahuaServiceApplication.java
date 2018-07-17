@@ -1,5 +1,6 @@
 package com.avalon.ymjhuahua;
 
+import com.avalon.ymjhuahuastarter.ymjhuahuastarter.MyStartupRunner;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -19,6 +20,11 @@ public class YmjhuahuaServiceApplication {
     @LoadBalanced
     public RestTemplate restTemplate() {
         return new RestTemplate();
+    }
+
+    @Bean
+    public MyStartupRunner startupRunner() {
+        return new MyStartupRunner();
     }
 
     public static void main(String[] args) {

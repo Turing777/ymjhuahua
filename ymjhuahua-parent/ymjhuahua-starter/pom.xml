@@ -4,12 +4,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.avalon.ymjhuahua</groupId>
-    <artifactId>ymjhuahua-service</artifactId>
+    <artifactId>ymjhuahua-starter</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>ymjhuahua-service</name>
-    <description>Demo project for Spring Boot</description>
+    <name>ymjhuahua-starter</name>
+    <description>starter</description>
 
     <parent>
         <groupId>com.avalon.ymjhuahua</groupId>
@@ -20,14 +20,6 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-eureka</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
@@ -35,11 +27,6 @@
         <dependency>
             <groupId>com.avalon.ymjhuahua</groupId>
             <artifactId>ymjhuahua-common</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>com.avalon.ymjhuahua</groupId>
-            <artifactId>ymjhuahua-starter</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>
