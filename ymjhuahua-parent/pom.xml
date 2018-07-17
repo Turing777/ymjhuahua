@@ -27,6 +27,7 @@
         <module>ymjhuahua-test-client1</module>
         <module>ymjhuahua-cache</module>
         <module>ymjhuahua-zuul</module>
+        <module>ymjhuahua-config</module>
     </modules>
 
     <properties>

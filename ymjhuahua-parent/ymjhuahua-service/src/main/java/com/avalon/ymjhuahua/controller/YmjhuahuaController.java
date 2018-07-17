@@ -64,10 +64,20 @@ public class YmjhuahuaController extends AbstractController {
         return testService.select();
     }
 
+<<<<<<< HEAD
     @RequestMapping(value = "/testSpring")
     public String getTestResult() {
         BeanFactory bean = new XmlBeanFactory(new ClassPathResource("testspring.xml"));
         TestSpringService testSpringService = (TestSpringService) bean.getBean("test");
         return testSpringService.testSpringMethod("test success");
+=======
+    @RequestMapping(value = "/test/{abc}")
+    public String test(@PathVariable("abc") String abc) {
+        if (abc.equals("a")) {
+            throw new NullPointerException();
+        }
+        logger.info("执行目标代码");
+        return "success" + abc;
+>>>>>>> 238d8b7da5a00e8dc62da93b1cd20da5b544a063
     }
 }
